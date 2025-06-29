@@ -45,7 +45,7 @@ const setting = {
   //是否显示logo，不显示时设置false，显示时请填写remixIcon图标名称，暂时只支持设置remixIcon
   logo: 'vuejs-fill',
   //是否显示在页面高亮错误
-  errorLog: ['development', 'production'],
+  errorLog: ['development'],
   //是否开启登录拦截
   loginInterception: true,
   //是否开启登录RSA加密
@@ -65,6 +65,6 @@ const setting = {
   //是否显示终端donation打印
   donation: true,
   //是否开启图片压缩
-  imageCompression: false,
+  imageCompression: true,
 }
 module.exports = setting
