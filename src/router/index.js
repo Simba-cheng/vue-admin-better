@@ -53,6 +53,24 @@ export const asyncRoutes = [
       },
     ],
   },
+  {
+    path: '/stock',
+    component: Layout,
+    redirect: 'noRedirect',
+    name: 'Stock',
+    meta: {
+      title: '天天养基',
+      icon: 'chart-line',
+      permissions: ['admin'],
+    },
+    children: [
+      {
+        path: 'https://qdii.vuejs-core.cn',
+        name: 'Qdii',
+        meta: { title: '天天养基', icon: 'chart-line', target: '_blank' },
+      },
+    ],
+  },
 
   /* {
     path: "/test",
@@ -232,6 +250,30 @@ export const asyncRoutes = [
         component: () => import('@/views/vab/more/index'),
         meta: { title: '关于', permissions: ['admin'] },
       },
+      {
+        path: 'chart',
+        name: 'Chart',
+        component: () => import('@/views/vab/chart/index'),
+        meta: { title: '图表', permissions: ['admin'] },
+      },
+      {
+        path: 'tab',
+        name: 'Tab',
+        component: () => import('@/views/vab/tab/index'),
+        meta: { title: '选项卡', permissions: ['admin'] },
+      },
+      {
+        path: 'editor',
+        name: 'Editor',
+        component: () => import('@/views/vab/editor/index'),
+        meta: { title: '编辑器', permissions: ['admin'] },
+      },
+      {
+        path: 'qrCode',
+        name: 'QrCode',
+        component: () => import('@/views/vab/qrCode/index'),
+        meta: { title: '二维码', permissions: ['admin'] },
+      },
     ],
   },
   {
@@ -315,6 +357,25 @@ export const asyncRoutes = [
     ],
   },
   {
+    path: '/store',
+    component: Layout,
+    meta: {
+      title: '',
+      icon: '',
+    },
+    children: [
+      {
+        path: 'https://vuejs-core.cn/store',
+        meta: {
+          title: '模板市场',
+          target: '_blank',
+          icon: 'mortar-pestle',
+          badge: 'Hot',
+        },
+      },
+    ],
+  },
+  {
     path: '/external-job',
     component: Layout,
     meta: {
@@ -323,9 +384,9 @@ export const asyncRoutes = [
     },
     children: [
       {
-        path: 'https://job.vuejs-core.cn/posts',
+        path: 'https://qdii.vuejs-core.cn',
         meta: {
-          title: '找工作',
+          title: '天天养基',
           target: '_blank',
           icon: 'horse-head',
           badge: 'New',
@@ -333,6 +394,26 @@ export const asyncRoutes = [
       },
     ],
   },
+  {
+    path: '/donate-menu',
+    component: Layout,
+    meta: {
+      title: '支持我们',
+      icon: 'heart',
+    },
+    children: [
+      {
+        path: '/donate',
+        component: () => import('@/views/donate/index'),
+        meta: {
+          title: '支持我们',
+          icon: 'heart',
+          badge: 'Donate',
+        },
+      },
+    ],
+  },
+
   {
     path: '*',
     redirect: '/404',

@@ -301,6 +301,18 @@
                       </div>
                     </div>
                   </a>
+                  <a href="https://vuejs-core.cn/store" target="_blank">
+                    <div class="premium-card featured">
+                      <div class="premium-header">
+                        <vab-icon class="premium-icon" :icon="['fas', 'shopping-cart']" />
+                        <div class="premium-badge">模板市场</div>
+                      </div>
+                      <div class="premium-content">
+                        <div class="premium-title">模板市场</div>
+                        <div class="premium-price">￥0-1899</div>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
 
@@ -1037,7 +1049,7 @@
 
             &:hover {
               transform: translateY(-2px);
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+              box-shadow: $base-shadow-lg;
               background: #ffffff;
             }
 
@@ -1300,7 +1312,7 @@
 
                 &:hover {
                   transform: translateY(-2px);
-                  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                  box-shadow: $base-shadow-lg;
                 }
 
                 &.primary-btn {
@@ -1524,13 +1536,13 @@
       border: none;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      box-shadow: $base-shadow;
       transition: all 0.4s ease;
       background: #ffffff;
 
       &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+        box-shadow: $base-shadow-lg;
       }
 
       .icon-container {
@@ -1557,7 +1569,7 @@
             color: white;
             font-size: 1.8rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: $base-shadow;
           }
 
           .icon-title {

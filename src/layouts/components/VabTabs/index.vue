@@ -336,9 +336,10 @@
             margin-top: 3px;
             padding: 0 20px;
             line-height: $base-tag-item-height;
-            border: 1px solid $base-color-default;
-            color: $base-color-default;
-            border-radius: 5px;
+            color: #606266;
+            background: rgba(0, 0, 0, 0.04);
+            border: none;
+            border-radius: 8px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -361,9 +362,8 @@
             }
 
             &:hover {
-              color: rgba(255, 255, 255, 0.95);
-              background: $base-color-default;
-              border-color: $base-color-default;
+              color: #303133;
+              background: rgba(0, 0, 0, 0.08);
 
               &::before {
                 left: 100%;
@@ -372,22 +372,31 @@
 
             &.is-active {
               color: rgba(255, 255, 255, 0.95);
-              background: $base-color-default;
-              border-color: $base-color-default;
+              background: linear-gradient(90deg, $base-color-default, lighten($base-color-default, 10%));
+              box-shadow: 0 2px 8px rgba(77, 138, 240, 0.3);
+
+              .el-icon-close {
+                color: rgba(255, 255, 255, 0.8);
+
+                &:hover {
+                  color: rgba(255, 255, 255, 1);
+                  background: rgba(255, 255, 255, 0.2);
+                }
+              }
             }
 
             .el-icon-close {
               position: relative;
               margin-left: 8px;
               font-size: 12px;
-              color: rgba(255, 255, 255, 0.7);
+              color: rgba(0, 0, 0, 0.4);
               transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
               border-radius: 5px;
               padding: 2px;
 
               &:hover {
-                color: rgba(255, 255, 255, 0.9);
-                background: rgba(255, 255, 255, 0.2);
+                color: rgba(0, 0, 0, 0.65);
+                background: rgba(0, 0, 0, 0.08);
                 transform: scale(1.2);
               }
             }
@@ -422,31 +431,6 @@
       &:active {
         transform: translateY(0);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
-      }
-    }
-  }
-
-  // 响应式设计
-  @media (max-width: 768px) {
-    .tabs-container {
-      padding: 0 12px;
-
-      .tabs-content {
-        width: calc(100% - 80px);
-
-        ::v-deep {
-          .el-tabs__item {
-            padding: 0 12px;
-            margin-right: 6px;
-            font-size: 12px;
-            border-radius: 12px;
-          }
-        }
-      }
-
-      .more {
-        padding: 6px 12px;
-        font-size: 12px;
       }
     }
   }
